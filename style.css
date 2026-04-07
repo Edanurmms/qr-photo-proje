@@ -1,0 +1,98 @@
+/* Genel sayfa ayarları */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fffde7; /* açık limon sarısı */
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Başlıklar */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #fbc02d; /* limon sarısı başlık */
+}
+
+/* Kart tasarımı */
+.card {
+  background-color: #fff9c4; /* limon sarısı kart */
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Input ve butonlar */
+input[type="text"], input[type="file"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #fdd835; /* canlı sarı kenarlık */
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background-color: #fffde7;
+  color: #333;
+  transition: 0.2s;
+}
+
+input[type="text"]::placeholder {
+  color: #333;
+}
+
+input[type="text"]:focus, input[type="file"]:focus {
+  border-color: #fbc02d;
+}
+
+/* Limon sarısı butonlar */
+button {
+  background-color: #fdd835; /* limon sarısı */
+  color: #333;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #fbc02d; /* daha canlı sarı */
+}
+
+/* Önizleme */
+.preview img {
+  max-width: 120px;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Dosya listesi */
+.file-list {
+  margin-top: 15px;
+}
+
+.file-list ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.file-list li {
+  background-color: #fff59d; /* limon sarısı kutular */
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-size: 14px;
+}
