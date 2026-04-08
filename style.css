@@ -1,7 +1,7 @@
 /* Üst kısım için GIF arka plan */
 .header {
   height: 180px; /* GIF yüksekliği küçültüldü */
-  background: url('/resimler/sarıçiçekler.gif') no-repeat center top;
+ background: url('sarıçiçekler.gif') no-repeat center top;
   background-size: contain; /* GIF kırpılmadan küçültülür */
   background-repeat: no-repeat;
 }
