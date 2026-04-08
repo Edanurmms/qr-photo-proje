@@ -7,6 +7,9 @@
   <script type="module" src="app.js"></script>
 </head>
 <body>
+  <!-- Üst kısım (GIF arka plan) -->
+  <div class="header"></div>
+
   <div class="container">
     <h1>Beyza Nişan Fotoğrafları</h1>
 
@@ -16,13 +19,13 @@
       <input type="text" id="nameInput" placeholder="İsim Soyisim">
       <input type="file" id="photoInput">
       <div id="preview" class="preview"></div>
-      <button onclick="handleUpload()">Yükle</button>
+      <button class="btn" onclick="handleUpload()">Yükle</button>
     </div>
 
     <!-- Dosya listeleme bölümü -->
     <div class="card">
       <h2>Dosyalar</h2>
-      <button onclick="handleList()">Listele</button>
+      <button class="btn2"onclick="handleList()">Listele</button>
       <div id="fileList" class="file-list"></div>
     </div>
   </div>
