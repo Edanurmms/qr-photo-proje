@@ -1,16 +1,28 @@
+/* Üst kısım için GIF arka plan */
+.header {
+  height: 180px; /* GIF yüksekliği küçültüldü */
+  background: url('/resimler/sarıçiçekler.gif') no-repeat center top;
+  background-size: contain; /* GIF kırpılmadan küçültülür */
+  background-repeat: no-repeat;
+}
+
 /* Genel sayfa ayarları */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #fffde7; /* açık limon sarısı */
   margin: 0;
   padding: 20px;
-  color: #333;
+  color:  #fb8a01;
+  background-color: antiquewhite;
 }
 
 /* Container */
 .container {
   max-width: 700px;
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8); /* içerik okunabilir olsun diye yarı saydam arka plan */
+   background-color: antiquewhite;
+  border-radius: 12px;
+  padding: 20px;
 }
 
 /* Başlıklar */
@@ -18,16 +30,26 @@ h1 {
   text-align: center;
   margin-bottom: 30px;
   font-size: 2rem;
-  color: #fbc02d; /* limon sarısı başlık */
+  color: #43910e; /* limon sarısı başlık */
 }
 
 /* Kart tasarımı */
 .card {
-  background-color: #fff9c4; /* limon sarısı kart */
-  padding: 20px;
+  background-color: #f3d360; /* limon sarısı kart */
+  color: #43910e;
+  padding: 60px;
   margin-bottom: 25px;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+.card .btn{
+  background-color: #43910e;
+  color: antiquewhite;
+}
+
+.card .btn2{
+  background-color: #43910e;
+  color: antiquewhite;
 }
 
 /* Input ve butonlar */
@@ -35,11 +57,11 @@ input[type="text"], input[type="file"] {
   width: 100%;
   padding: 10px 12px;
   margin-bottom: 12px;
-  border: 1px solid #fdd835; /* canlı sarı kenarlık */
+  border: 1px solid #fdd835;
   border-radius: 8px;
   font-size: 14px;
   outline: none;
-  background-color: #fffde7;
+  background-color: antiquewhite;
   color: #333;
   transition: 0.2s;
 }
@@ -54,7 +76,7 @@ input[type="text"]:focus, input[type="file"]:focus {
 
 /* Limon sarısı butonlar */
 button {
-  background-color: #fdd835; /* limon sarısı */
+  background-color: #fdd835;
   color: #333;
   border: none;
   padding: 12px 20px;
@@ -65,7 +87,7 @@ button {
 }
 
 button:hover {
-  background-color: #fbc02d; /* daha canlı sarı */
+  background-color: #fbc02d;
 }
 
 /* Önizleme */
@@ -90,7 +112,7 @@ button:hover {
 }
 
 .file-list li {
-  background-color: #fff59d; /* limon sarısı kutular */
+  background-color: #fff59d;
   padding: 10px 15px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
