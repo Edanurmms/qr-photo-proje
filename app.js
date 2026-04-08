@@ -36,7 +36,7 @@ async function uploadPhoto(file, customFileName) {
   }
 }
 
-// Dosyaları listeleme
+// Dosyaları listeleme (2’şer gruplar halinde, son satır tek kalırsa tek gösterilir)
 async function listPhotos() {
   const { data, error } = await supabase
     .storage
@@ -53,11 +53,39 @@ async function listPhotos() {
       listDiv.textContent = 'Hiç dosya yok.'
     } else {
       const ul = document.createElement('ul')
-      data.forEach(f => {
+
+      for (let i = 0; i < data.length; i += 2) {
         const li = document.createElement('li')
-        li.textContent = f.name
+        li.textContent = "• "
+
+        // İlk dosya
+        const { data: urlData1 } = supabase
+          .storage
+          .from('beyza-photo')
+          .getPublicUrl(`${userId}/${data[i].name}`)
+        const link1 = document.createElement('a')
+        link1.href = urlData1.publicUrl
+        link1.textContent = data[i].name
+        link1.target = "_blank"
+        li.appendChild(link1)
+
+        // İkinci dosya varsa ekle
+        if (i + 1 < data.length) {
+          li.appendChild(document.createTextNode(" | "))
+          const { data: urlData2 } = supabase
+            .storage
+            .from('beyza-photo')
+            .getPublicUrl(`${userId}/${data[i+1].name}`)
+          const link2 = document.createElement('a')
+          link2.href = urlData2.publicUrl
+          link2.textContent = data[i+1].name
+          link2.target = "_blank"
+          li.appendChild(link2)
+        }
+
         ul.appendChild(li)
-      })
+      }
+
       listDiv.appendChild(ul)
     }
   }
